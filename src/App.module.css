@@ -15,25 +15,60 @@
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding:3rem 5rem
 }
 
-.main{
+.main {
   background-color: #282c34;
-  flex-grow:1;
-  color:white;
+  flex-grow: 1;
+  color: white;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+  text-align: left;
+  padding: 0 5rem;
 }
-.main>div{
+.main > div {
   transform: translate(0%, -50%);
 }
+.content {
+  width: 100%;
+}
+.content > h2 {
+  font-size: 5rem;
+  font-weight: 500;
+  margin:1rem 0
+}
+.content > div {
+}
 
+.skills > span {
+  margin: 1rem 2rem;
+}
+.skills > span:first-child {
+  margin-left: 0;
+}
+
+footer {
+  display: flex;
+  background-color: #282c34;
+}
+footer > a {
+  margin: 3rem;
+  transition: transform 0.3s ease-in-out;
+}
+footer > a:first-child {
+  margin-left: 5rem;
+}
+footer > a:last-child {
+  margin-left: auto;
+}
+footer > a:hover {
+  transform: scale(1.05) translateY(-3px);
+}
 
 .link {
   color: #b318f0;
