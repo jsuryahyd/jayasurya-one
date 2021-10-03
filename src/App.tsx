@@ -15,7 +15,7 @@ const App: Component = () => {
             <span>My Sql</span>
             <span>React</span>
             <span>React Native</span>
-            <span>Chrome Extension</span>
+            <span>Chrome Extensions</span>
           </div>
           {/* <div class={styles.skills} style={{ display: "flex" }}>
             <span>Server Side applications</span>
