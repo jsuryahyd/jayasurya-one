@@ -1,2 +1,3 @@
-# jayasurya-one
+# JayaSurya-One
+---
 Personal Website
