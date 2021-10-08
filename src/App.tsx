@@ -2,11 +2,18 @@ import type { Component } from "solid-js";
 
 import logo from "./logo.svg";
 import styles from "./App.module.css";
-
+import linkedInImage from "./assets/img/linkedin-original.svg";
+import fbSvg from "./assets/img/facebook-original.svg";
+import twitterSvg from "./assets/img/twitter-original.svg";
+import githubSvg from "./assets/img/github-original.svg";
+import soSvg from "./assets/img/stackoverflow.svg";
+import envelope from "./assets/img/envelope.svg";
 const App: Component = () => {
   return (
     <div class={styles.App}>
-      <header class={styles.header}><span>Jaya Surya</span></header>
+      <header class={styles.header}>
+        <span>Jaya Surya</span>
+      </header>
       <main class={styles.main}>
         <div class={styles["content"]}>
           <h2>Senior Full Stack Developer</h2>
@@ -35,36 +42,52 @@ const App: Component = () => {
           rel="noreferrer noopener"
           href="https://github.com/jsuryahyd"
         >
-          Github
+          <img src={githubSvg} />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://stackoverflow.com/users/story/7314900"
+        >
+          {/* linkedin */}
+          <img src={soSvg} />
         </a>
         <a
           target="_blank"
           rel="noreferrer  noopener"
           href="https://twitter.com/jaysuryahyd"
         >
-          twitter
+          <img src={twitterSvg} />
         </a>
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.facebook.com/profile.php?id=100027093039467"
         >
-          facebook
+          <img src={fbSvg} />
         </a>
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/jaya-surya-b67a51206/"
         >
-          linkedin
+          {/* linkedin */}
+          <img src={linkedInImage} />
         </a>
+
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="mailto:jaysuryahyd@gmail.com"
-          style={{ marginLeft: "auto" }}
+          style={{
+            "margin-left": "auto",
+            "font-size": "1.5rem",
+            display: "flex",
+            "align-items": "center",
+          }}
         >
-          jaysuryahyd@gmail.com
+          <img src={envelope} style={{ "margin-right": "1rem" }} />
+          <span>jaysuryahyd@gmail.com</span>
         </a>
       </footer>
     </div>

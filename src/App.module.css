@@ -70,6 +70,10 @@ footer > a:hover {
   transform: scale(1.05) translateY(-3px);
 }
 
+footer a img{
+  width:2.5rem
+}
+
 .link {
   color: #b318f0;
 }
