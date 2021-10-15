@@ -12,7 +12,7 @@ const App: Component = () => {
   return (
     <div class={styles.App}>
       <header class={styles.header}>
-        <span>Jaya Surya</span>
+        <a target="_blank" href="https://docs.google.com/document/d/1OXNuIQdYByfBYvVxUXxjmP0cVLzuAt5SXSpJ_SpW71U/edit?usp=sharing">Jaya Surya</a>
       </header>
       <main class={styles.main}>
         <div class={styles["content"]}>
