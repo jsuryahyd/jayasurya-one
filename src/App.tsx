@@ -12,7 +12,19 @@ const App: Component = () => {
   return (
     <div class={styles.App}>
       <header class={styles.header}>
-        <a target="_blank" href="https://docs.google.com/document/d/1OXNuIQdYByfBYvVxUXxjmP0cVLzuAt5SXSpJ_SpW71U/edit?usp=sharing">Jaya Surya</a>
+        <a
+          target="_blank"
+          href="https://docs.google.com/document/d/1OXNuIQdYByfBYvVxUXxjmP0cVLzuAt5SXSpJ_SpW71U/edit?usp=sharing"
+        >
+          Jaya Surya
+        </a>
+        <a
+          target="_blank"
+          class={styles["resume-link"]}
+          href="https://drive.google.com/file/d/15W_VI0AolmRHb4tC0LEhkMpJH1gU3T4K/view"
+        >
+          Resume/CV
+        </a>
       </header>
       <main class={styles.main}>
         <div class={styles["content"]}>

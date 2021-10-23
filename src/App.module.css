@@ -18,7 +18,30 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding:3rem 5rem
+  padding: 3rem 5rem;
+}
+
+.resume-link {
+  margin-left: auto;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+.resume-link:hover {
+  /* transform: scale(1.05); */
+}
+.resume-link::after{
+  content :" ";
+  position: absolute;
+  bottom: 0;
+  left:0;
+  height: 2px;width: 100%;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.3s;
+  background-color: white;
+}
+.resume-link:hover::after {
+  transform:scale(1);
 }
 
 .main {
@@ -40,7 +63,7 @@
 .content > h2 {
   font-size: 5rem;
   font-weight: 500;
-  margin:1rem 0
+  margin: 1rem 0;
 }
 .content > div {
 }
@@ -70,8 +93,8 @@ footer > a:hover {
   transform: scale(1.05) translateY(-3px);
 }
 
-footer a img{
-  width:2.5rem
+footer a img {
+  width: 2.5rem;
 }
 
 .link {
