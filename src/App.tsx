@@ -23,7 +23,7 @@ const App: Component = () => {
           class={styles["resume-link"]}
           href="https://drive.google.com/file/d/15W_VI0AolmRHb4tC0LEhkMpJH1gU3T4K/view"
         >
-          Resume/CV
+          Resume / CV
         </a>
       </header>
       <main class={styles.main}>
