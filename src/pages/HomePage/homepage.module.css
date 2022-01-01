@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.logo {
+  animation: logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 3rem 5rem;
+}
+
+.resume-link {
+  margin-left: auto;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+.resume-link:hover {
+  /* transform: scale(1.05); */
+}
+.resume-link::after{
+  content :" ";
+  position: absolute;
+  bottom: 0;
+  left:0;
+  height: 2px;width: 100%;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.3s;
+  background-color: white;
+}
+.resume-link:hover::after {
+  transform:scale(1);
+}
+
+.main {
+  background-color: #282c34;
+  flex-grow: 1;
+  color: white;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: left;
+  padding: 0 5rem;
+}
+.main > div {
+  transform: translate(0%, -50%);
+}
+.content {
+  width: 100%;
+}
+.content > h2 {
+  font-size: 5rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+.content > div {
+}
+
+.skills > span {
+  margin: 1rem 2rem;
+}
+.skills > span:first-child {
+  margin-left: 0;
+}
+
+footer {
+  display: flex;
+  background-color: #282c34;
+}
+footer > a {
+  margin: 3rem;
+  transition: transform 0.3s ease-in-out;
+}
+footer > a:first-child {
+  margin-left: 5rem;
+}
+footer > a:last-child {
+  margin-left: auto;
+}
+footer > a:hover {
+  transform: scale(1.05) translateY(-3px);
+}
+
+footer a img {
+  width: 2.5rem;
+}
+
+.link {
+  color: #b318f0;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
