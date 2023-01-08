@@ -31,7 +31,8 @@ export default function HomePage(){
 			<h2>Senior Full Stack Developer</h2>
 			<div class={styles.skills} style={{ display: "flex" }}>
 				<span>Nodejs</span>
-				<span>My Sql</span>
+				<span>MySql</span>
+				<span>HTML & CSS</span>
 				<span>React</span>
 				<span>React Native</span>
 				<span>Chrome Extensions</span>
@@ -59,7 +60,7 @@ export default function HomePage(){
 		<a
 			target="_blank"
 			rel="noopener noreferrer"
-			href="https://stackoverflow.com/users/story/7314900"
+			href="https://stackoverflow.com/users/7314900/jay-surya"
 		>
 			{/* linkedin */}
 			<img src={soSvg} />
