@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import styles from "./homepage.module.css";
 import linkedInImage from "../assets/img/linkedin-original.svg";
 import fbSvg from "../assets/img/facebook-original.svg";
