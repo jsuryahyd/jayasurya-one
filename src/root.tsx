@@ -23,6 +23,7 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" type="image/ico" href="/favicon.png" />
         <meta name="theme-color" content="#000000" />
+        {/* <link rel="stylesheet" href="blog.css" /> */}
       </Head>
       <Body>
         <ErrorBoundary>

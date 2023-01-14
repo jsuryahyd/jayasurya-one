@@ -5,28 +5,14 @@ import twitterSvg from "../assets/img/twitter-original.svg";
 import githubSvg from "../assets/img/github-original.svg";
 import soSvg from "../assets/img/stackoverflow.svg";
 import envelope from "../assets/img/envelope.svg";
-
+import WebsiteHeader from "~/components/Header/header"
 export default function HomePage(){
 	return <div class={styles.App}>
-	<header class={styles.header}>
-		<a
-			target="_blank"
-			href="https://docs.google.com/document/d/1OXNuIQdYByfBYvVxUXxjmP0cVLzuAt5SXSpJ_SpW71U/edit?usp=sharing"
-		>
-			Jaya Surya
-		</a>
-		<a
-			target="_blank"
-			class={styles["resume-link"]}
-			href="https://drive.google.com/file/d/15W_VI0AolmRHb4tC0LEhkMpJH1gU3T4K/view"
-		>
-			Resume / CV
-		</a>
-	</header>
+	<WebsiteHeader isHomePage={true}/>
 	<main class={styles.main}>
 		<div class={styles["content"]}>
 			<h2>Senior Full Stack Developer</h2>
-			<div class={styles.skills} style={{ display: "flex" }}>
+			<div class={styles.skills}>
 				<span>Nodejs</span>
 				<span>MySql</span>
 				<span>HTML & CSS</span>

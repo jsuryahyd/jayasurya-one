@@ -3,10 +3,17 @@
 [https://jayasurya.one](https://jayasurya.one)
 
 Personal Website - In Progress
+### SSG
+- https://www.npmjs.com/package/solid-start-static?activeTab=explore
 
 
-
-
+---
+Firebase
+1. run the site locally, emulating firebase
+	`npm install -g firebase-tools`
+	`firebase login`
+	`firebase hosting:channel:deploy <any-random-word>`
+2. https://firebase.google.com/docs/hosting/github-integration for some reference
 
 
 

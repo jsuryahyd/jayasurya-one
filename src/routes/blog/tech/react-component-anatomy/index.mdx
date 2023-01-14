@@ -1,0 +1,34 @@
+import counterExampleSVG from "~/assets/img/blog/tech/counter-example.svg";
+
+# React Component Anatomy
+
+_Senior Fullstack Developer, working since 3yrs in react_
+
+_Article is targeted towards devs with working knowledge in react_
+
+---
+
+<br />
+Let us go through the Anatomy of a React functional component, Here is a simple counter
+that logs the count when user changes it.
+
+<figure>
+<img src={counterExampleSVG} />
+<figcaption><i>Image created at <a href="https://carbon.vercel.app/" target="_blank">https://carbon.vercel.app/</a></i></figcaption>
+</figure>
+<br />
+### The component function
+
+The function itself runs everytime a state variable is updated via the setter (second item in the array returned by the useState call).
+The function also runs when a prop passed to it changes. (shallow comparison is made, so if a prop is an object, its reference should change[search for 'reference vs value in javascript'](https://www.google.com/search?q=reference+vs+value+in+javascript))
+
+<br />
+### The State ([Refer to beta.reactjs.org docs](https://beta.reactjs.org/learn/state-as-a-snapshot))
+
+State variables are not intended to be like a javascript variable. They represent a snapshot of that state, which means the value of `count` is 1 since the last time the component function ran (it is called whenever a state/prop is changed). So, you can't expect to change `count` by assigning a new value to it, and use it in the subsequent lines of code. Rather, you have to update its value with `setCount`, and expect that the function is called again, and this time the `count`(which is just a snapshot), holds the newer value, and that is when your ui starts showing the newer value. Its the `useState()` that returns the new snaphot, everytime the component function is called over and over.
+
+<br />
+### The Effect ... (coming soon)
+<br />
+<br />
+<br />
