@@ -3,7 +3,9 @@
 html{
   font-size:14px;
   color:white;
-  background-color: #282c34;
+  --primary-bg:#282c34;
+  --primary-color:#fff;
+  background-color: var(--primary-bg);
 }
 html,*{
   box-sizing: border-box;
@@ -15,6 +17,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+input,button{
+  color:inherit
+}
+small{
+  font-size: 0.6em;
+}
+.invisible-placeholder{
+  opacity: 0;
+  pointer-events: none;
+}
+button:hover{
+  cursor: pointer;
 }
 
 img{

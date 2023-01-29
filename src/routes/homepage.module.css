@@ -46,7 +46,7 @@
 }
 
 .main {
-  background-color: #282c34;
+  background-color: var(--primary-bg);
   flex-grow: 1;
   color: white;
   display: flex;
@@ -82,7 +82,7 @@
 footer {
   display: flex;
   flex-wrap: wrap-reverse;
-  background-color: #282c34;
+  background-color: var(--primary-bg);
 }
 footer > a {
   margin: 1rem;

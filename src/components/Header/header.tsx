@@ -11,7 +11,7 @@ export default function WebsiteHeader(props:{isHomePage:boolean}){
 		<a
 			href="/blog/tech"
 		>
-			Tech-blog
+			Articles
 		</a>
 		<a
 			target="_blank"
