@@ -129,26 +129,7 @@ function Alarm() {
           )}
         </div>
 
-        {/*-----------------------------*/}
-
-        {/* {((alarmState() === "idle" && mins() > 0)) && (
-          <button
-            class={classNames["action-btn"]}
-            onClick={() => {
-              let _mins = Number(mins());
-              if (!_mins) {
-								const value = inputTime();
-                if (value) setMins(Number(value));
-								_mins = value;
-								if(!_mins) return alert('Please enter valid number')
-              }
-							
-							startAlarm(_mins);
-            }}
-          >
-            {"Start"}
-          </button>
-        )} */}
+        
         {["running", "snooze", "buzzing"].includes(alarmState()) ? (
           <button
             class={classNames["action-btn"] + " " + classNames["stop-btn"]}
