@@ -3,16 +3,20 @@ import classNames from "./timer.module.css";
 
 const alarmStates = ["idle", "running", "snooze", "buzzing"] as const;
 
+//todo: add toast messages
 function Alarm() {
   const [mins, setMins] = createSignal(0);
   const [alarmState, setAlarmState] =
     createSignal<typeof alarmStates[number]>("idle");
   let audioPlayer: HTMLAudioElement | null = null;
+  let videoPlayer: HTMLVideoElement | null = null;
   let snoozes = [];
   createEffect(() => {
     alarmState() === "buzzing"
       ? audioPlayer?.play()
       : (audioPlayer?.pause(), audioPlayer && (audioPlayer.currentTime = 0));
+
+    alarmState() === "running" ? videoPlayer?.play() : videoPlayer?.pause();
   });
 
   function startAlarm(mins: number) {
@@ -129,7 +133,6 @@ function Alarm() {
           )}
         </div>
 
-        
         {["running", "snooze", "buzzing"].includes(alarmState()) ? (
           <button
             class={classNames["action-btn"] + " " + classNames["stop-btn"]}
@@ -139,9 +142,7 @@ function Alarm() {
           </button>
         ) : (
           <button
-            class={
-              classNames["action-btn"] + " " + "invisible-placeholder"
-            }
+            class={classNames["action-btn"] + " " + "invisible-placeholder"}
             onClick={stopAlarm}
           >
             {"occupying space"}
@@ -154,6 +155,14 @@ function Alarm() {
           loop
           autoplay={false}
         ></audio>
+        <video
+          muted
+          ref={videoPlayer as unknown as HTMLVideoElement}
+          autoplay={false}
+          loop
+          src="/videoplayback.mp4"
+          style={{ position: "fixed", right: "-1000px", width: "100px" }}
+        ></video>
       </div>
       <footer>
         Sound Effect by{" "}
