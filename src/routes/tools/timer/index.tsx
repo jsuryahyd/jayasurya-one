@@ -1,8 +1,11 @@
-import { createEffect, createSignal } from "solid-js";
+import { createEffect, createSignal,createMemo } from "solid-js";
 import classNames from "./timer.module.css";
-
+import NoSleep from "nosleep.js";
 const alarmStates = ["idle", "running", "snooze", "buzzing"] as const;
-
+const localStorageKeys = {
+  timerSessionStartedAt: "timer-session-started-at",
+  timeRemaining: "time-remaining",
+};
 //todo: add toast messages
 function Alarm() {
   const [mins, setMins] = createSignal(0);
@@ -16,7 +19,11 @@ function Alarm() {
       ? audioPlayer?.play()
       : (audioPlayer?.pause(), audioPlayer && (audioPlayer.currentTime = 0));
 
-    alarmState() === "running" ? videoPlayer?.play() : videoPlayer?.pause();
+    // alarmState() === "running" ? void 0 : videoPlayer?.pause();
+  });
+  let nosleep: NoSleep;
+  createEffect(() => {
+    nosleep = new NoSleep(); //initializing here, to avoid initializing on SSR
   });
 
   function startAlarm(mins: number) {
@@ -29,12 +36,20 @@ function Alarm() {
     }
 
     setAlarmState("running");
+    //this play will keep the screen on.
+    // videoPlayer?.play();
+    nosleep?.enable?.();//has to be in an event listener, so not  putting in createEffect()
+    
     setTimeout(() => {
       setAlarmState("buzzing");
     }, mins * 60 * 1000);
 
     timer = setInterval(() => {
       setMins((prev) => {
+        localStorage.setItem(
+          localStorageKeys.timeRemaining,
+          Number(prev) - 1 + ""
+        );
         if (prev <= 0) {
           console.log("reached zero");
           clearInterval(timer);
@@ -48,10 +63,30 @@ function Alarm() {
     clearInterval(timer);
     setAlarmState("idle");
     setMins(0);
+    nosleep?.disable();
+    localStorage.removeItem(localStorageKeys.timerSessionStartedAt);
+    localStorage.removeItem(localStorageKeys.timeRemaining);
   }
 
+  const startTime = createMemo(()=> {
+    if(typeof localStorage === "undefined") return ""
+    const startTime = localStorage?.getItem(
+      localStorageKeys.timerSessionStartedAt
+    );
+    if (!startTime) return "";
+    const time = new Date();
+    const timerTime =
+      (time.getHours() + "").padStart(2, "0") +
+      (time.getMinutes() + "").padStart(2, "0");
+    return timerTime
+  })
+
   function inputTime() {
-    const value = window.prompt("Enter number of minutes", "45");
+    const timeRemaining = localStorage.getItem(localStorageKeys.timeRemaining);
+    const value = window.prompt(
+      "Enter number of minutes",
+      timeRemaining || "45"
+    );
     if (Number(value) < 0) {
       alert("Cannot be negative");
       return 0;
@@ -125,6 +160,10 @@ function Alarm() {
               }}
               onClick={() => {
                 const value = inputTime();
+                localStorage.setItem(
+                  localStorageKeys.timerSessionStartedAt,
+                  new Date().toISOString()
+                );
                 if (value) startAlarm(value);
               }}
             >
@@ -155,14 +194,15 @@ function Alarm() {
           loop
           autoplay={false}
         ></audio>
-        <video
+        {/* <video
           muted
           ref={videoPlayer as unknown as HTMLVideoElement}
           autoplay={false}
           loop
           src="/videoplayback.mp4"
           style={{ position: "fixed", right: "-1000px", width: "100px" }}
-        ></video>
+        ></video> */}
+        <span style={{"position":"absolute",bottom:"0",right:"0"}}>{startTime()}</span>
       </div>
       <footer>
         Sound Effect by{" "}
