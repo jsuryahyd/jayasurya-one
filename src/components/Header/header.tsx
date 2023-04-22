@@ -8,15 +8,15 @@ export default function WebsiteHeader(props:{isHomePage:boolean}){
 			Jaya Surya
 		</a>
 		<div>
-		<a
+		{/* <a
 			href="/blog/tech"
 		>
 			Articles
-		</a>
+		</a> */}
 		<a
 			target="_blank"
 			class={styles["resume-link"]}
-			href="https://drive.google.com/file/d/15W_VI0AolmRHb4tC0LEhkMpJH1gU3T4K/view"
+			href="https://drive.google.com/file/d/1UEZx58YNDmgRPJcP63YwvEm3RO4eyF9z/view?usp=sharing"
 		>
 			Resume / CV
 		</a>

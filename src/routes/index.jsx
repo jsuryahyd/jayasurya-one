@@ -11,7 +11,7 @@ export default function HomePage(){
 	<WebsiteHeader isHomePage={true}/>
 	<main class={styles.main}>
 		<div class={styles["content"]}>
-			<h2>Senior Full Stack Developer</h2>
+			<h2>Lead Full Stack Developer</h2>
 			<div class={styles.skills}>
 				<span>Nodejs</span>
 				<span>MySql</span>
