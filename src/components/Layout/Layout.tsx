@@ -1,15 +1,14 @@
-import type { Component } from "solid-js";
+import type { Component, PropsWithChildren } from "solid-js";
 
-import logo from "./logo.svg";
-import styles from "./homepage.module.css";
-import linkedInImage from "../../assets/img/linkedin-original.svg";
-import fbSvg from "../../assets/img/facebook-original.svg";
-import twitterSvg from "../../assets/img/twitter-original.svg";
-import githubSvg from "../../assets/img/github-original.svg";
-import soSvg from "../../assets/img/stackoverflow.svg";
-import envelope from "../../assets/img/envelope.svg";
+import styles from "@/pages/HomePage/homepage.module.css";
+import linkedInImage from "@/assets/img/linkedin-original.svg";
+import fbSvg from "@/assets/img/facebook-original.svg";
+import twitterSvg from "@/assets/img/twitter-original.svg";
+import githubSvg from "@/assets/img/github-original.svg";
+import soSvg from "@/assets/img/stackoverflow.svg";
+import envelope from "@/assets/img/envelope.svg";
 
-export default function HomePage(){
+export default function Layout(props:PropsWithChildren){
 	return <div class={styles.App}>
 	<header class="app-header">
 		<a
@@ -26,29 +25,7 @@ export default function HomePage(){
 			Resume / CV
 		</a>
 	</header>
-	<main class={styles.main}>
-		<div class={styles["content"]}>
-			<h2>Senior Full Stack Developer</h2>
-			<div class={styles.skills} style={{ display: "flex" }}>
-				<span>Nodejs</span>
-				<span>MySql</span>
-				<span>HTML & CSS</span>
-				<span>React</span>
-				<span>React Native</span>
-				<span>Chrome Extensions</span>
-			</div>
-			{/* <div class={styles.skills} style={{ display: "flex" }}>
-				<span>Server Side applications</span>
-				<span>Mobile Applications</span>
-				<span>Web Development</span>
-			</div> */}
-			{/* <div class={styles.skills} style={{ display: "flex" }}>
-				<span>Server Side applications</span>
-				<span>Mobile Applications</span>
-				<span>Web Development</span>
-			</div> */}
-		</div>
-	</main>
+	{props.children}
 	<footer>
 		<a
 			target="_blank"

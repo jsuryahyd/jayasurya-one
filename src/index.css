@@ -28,3 +28,38 @@ a{
 .bg-black{
 
 }
+
+/*=========header ==========*/
+.app-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 3rem 5rem;
+}
+
+
+.resume-link {
+  margin-left: auto;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+.resume-link:hover {
+  /* transform: scale(1.05); */
+}
+.resume-link::after{
+  content :" ";
+  position: absolute;
+  bottom: 0;
+  left:0;
+  height: 2px;width: 100%;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.3s;
+  background-color: white;
+}
+.resume-link:hover::after {
+  transform:scale(1);
+}

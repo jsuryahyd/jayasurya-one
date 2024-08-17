@@ -1,7 +1,8 @@
 import { Component, lazy } from "solid-js";
 import HomePage from "./pages/HomePage";
 import { Link, Route, Router, Routes } from "solid-app-router";
-import { FormCodeGen } from "/@/pages/Tools/form-codegen";
+import { FormCodeGen } from "@/pages/Tools/form-codegen";
+import webAssemblyTest from "@/pages/web-assembly-test";
 
 const Tools = lazy(() => import("./pages/Tools/index"));
 const App: Component = () => {
@@ -21,6 +22,7 @@ const App: Component = () => {
           />
           <Route path="form-codegen" component={FormCodeGen} />
         </Route>
+        <Route path="/web-assembly-test" component={webAssemblyTest} />
         <Route path="/*all" element={() => <div>Page not found</div>} />
       </Routes>
     </Router>
