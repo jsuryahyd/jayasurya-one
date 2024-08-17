@@ -18,7 +18,10 @@ export default function FormCodeGen() {
   let input: HTMLInputElement | null = null;
   let optionsInputRef: HTMLInputElement | null = null;
   return (
-    <>
+    <main>
+      <div class="grid">
+<div>
+       
       <select
         onChange={(e) => setFieldType(e.currentTarget.value as inputTypes)}
       >
@@ -33,6 +36,7 @@ export default function FormCodeGen() {
       <input
         type="text"
         ref={input}
+        placeholder="name"
         onChange={(e) => setFormName(e.currentTarget.value)}
         value={getFormName()}
       />
@@ -62,9 +66,11 @@ export default function FormCodeGen() {
       >
         Add field
       </button>
-      <br />
+      </div>
+      
+      <div>
       <pre>{JSON.stringify(formFields.fields, null, 2)}</pre>
-      <For each={formFields.fields} fallback={<div>Add an item...</div>}>
+      <For each={formFields.fields} fallback={<div>No items</div>}>
         {(item, index) => (
           <div style={{ "margin-bottom": "0.5rem" }}>
             <FormField
@@ -95,7 +101,9 @@ export default function FormCodeGen() {
           </div>
         )}
       </For>
-    </>
+      </div>
+      </div>
+    </main>
   );
 }
 
@@ -111,7 +119,7 @@ function FormField(props: {
   console.log(props);
   return (
     <label>
-      {JSON.stringify(props)}
+      {/* {JSON.stringify(props)} */}
       <input
         style={{
           background: "transparent",

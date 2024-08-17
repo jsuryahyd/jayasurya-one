@@ -1,6 +1,7 @@
 import solid from "solid-start/vite";
 import ssgAdapter from "solid-start-static";
 import { defineConfig } from "vite";
+import watchGoPlugin from "./dev-helpers/watchGoPlugin.js"
 
 export default defineConfig({
   plugins: [
@@ -16,5 +17,6 @@ export default defineConfig({
       adapter:ssgAdapter(),
       extensions: [".mdx", ".md"],
     }),
+    watchGoPlugin()
   ],
 });

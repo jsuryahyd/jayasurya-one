@@ -11,7 +11,10 @@
     "types": ["solid-start/env"],
     "baseUrl": "./",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "@/*": [
+        "src/*"
+    ]
     }
   }
 }

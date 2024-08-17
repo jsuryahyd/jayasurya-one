@@ -24,3 +24,8 @@ gitignore
 # System Files
 .DS_Store
 Thumbs.db
+build
+.env.development
+.env.production
+#need to build separately while pushing for production
+src/assets/**/*.wasm 

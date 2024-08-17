@@ -22,6 +22,10 @@ export default function Root() {
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" type="image/ico" href="/favicon.png" />
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
         <meta name="theme-color" content="#000000" />
         {/* <link rel="stylesheet" href="blog.css" /> */}
       </Head>
@@ -35,7 +39,9 @@ export default function Root() {
             </main>
           </Suspense>
         </ErrorBoundary>
-        <Scripts />
+        <Scripts>
+        </Scripts>
+        <script src="/src/assets/js/wasm_exec.js"></script>
       </Body>
     </Html>
   );

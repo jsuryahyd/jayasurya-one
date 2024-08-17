@@ -22,28 +22,6 @@
   padding:1rem 2rem;
 }
 
-.resume-link {
-  margin-left: 2rem;
-  transition: transform 0.3s ease-in-out;
-  position: relative;
-}
-.resume-link:hover {
-  /* transform: scale(1.05); */
-}
-.resume-link::after{
-  content :" ";
-  position: absolute;
-  bottom: 0;
-  left:0;
-  height: 2px;width: 100%;
-  transform: scale(0);
-  transform-origin: center;
-  transition: transform 0.3s;
-  background-color: white;
-}
-.resume-link:hover::after {
-  transform:scale(1);
-}
 
 .main {
   background-color: var(--primary-bg);
