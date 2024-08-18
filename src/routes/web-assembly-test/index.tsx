@@ -9,7 +9,7 @@ export default ()=>{
 
 	createEffect(()=>{
 		const go = new (window as typeof window & {Go:any}).Go();
-    WebAssembly.instantiateStreaming(fetch("src/assets/js/main.wasm"), go.importObject).then((result) => {
+    WebAssembly.instantiateStreaming(fetch("/main.wasm"), go.importObject).then((result) => {
       go.run(result.instance);
     });
 	})

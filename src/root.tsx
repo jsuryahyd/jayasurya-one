@@ -28,6 +28,7 @@ export default function Root() {
     />
         <meta name="theme-color" content="#000000" />
         {/* <link rel="stylesheet" href="blog.css" /> */}
+        <script src="/wasm_exec.js"></script>
       </Head>
       <Body>
         <ErrorBoundary>
@@ -39,7 +40,6 @@ export default function Root() {
             </main>
           </Suspense>
         </ErrorBoundary>
-        <script src="/src/assets/js/wasm_exec.js"></script>
         <Scripts>
         </Scripts>
       </Body>
