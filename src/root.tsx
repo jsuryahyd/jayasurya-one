@@ -39,9 +39,9 @@ export default function Root() {
             </main>
           </Suspense>
         </ErrorBoundary>
+        <script src="/src/assets/js/wasm_exec.js"></script>
         <Scripts>
         </Scripts>
-        <script src="/src/assets/js/wasm_exec.js"></script>
       </Body>
     </Html>
   );
