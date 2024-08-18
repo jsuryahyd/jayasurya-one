@@ -16,7 +16,7 @@ export default function WebsiteHeader(props:{isHomePage:boolean}){
 		<a
 			target="_blank"
 			class={styles["resume-link"]}
-			href="https://drive.google.com/file/d/1UEZx58YNDmgRPJcP63YwvEm3RO4eyF9z/view?usp=sharing"
+			href="https://drive.google.com/file/d/1vFZ51GjhfXN6ejuMacadYkp33FwsUgzA/view"
 		>
 			Resume / CV
 		</a>
