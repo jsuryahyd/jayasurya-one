@@ -1,5 +1,4 @@
 import { Component, lazy } from "solid-js";
-import HomePage from "./pages/HomePage";
 import { Link, Route, Router, Routes } from "solid-app-router";
 import { FormCodeGen } from "~/pages/Tools/form-codegen";
 import webAssemblyTest from "~/pages/_web-assembly-test";
@@ -9,7 +8,6 @@ const App: Component = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={HomePage} />
         <Route path="/tools" component={Tools}>
           <Route
             path=""
