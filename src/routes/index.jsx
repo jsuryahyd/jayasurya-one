@@ -65,7 +65,7 @@ export default function HomePage(){
 		<a
 			target="_blank"
 			rel="noopener noreferrer"
-			href="https://www.linkedin.com/in/jaya-surya-b67a51206/"
+			href="https://www.linkedin.com/in/jaya-surya-teja-anisetty-b67a51206"
 		>
 			{/* linkedin */}
 			<img src={linkedInImage} />

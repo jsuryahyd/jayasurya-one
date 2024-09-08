@@ -13,14 +13,14 @@ export default function Layout(props:ParentProps ){
 	<header class="app-header">
 		<a
 			target="_blank"
-			href="https://docs.google.com/document/d/1OXNuIQdYByfBYvVxUXxjmP0cVLzuAt5SXSpJ_SpW71U/edit?usp=sharing"
+			href="https://docs.google.com/document/d/1YIL8aMWDrHraCcwdMnJhFn5GdzFYwMKHSGyG5f_cXhM/edit?usp=sharing"
 		>
 			Jaya Surya
 		</a>
 		<a
 			target="_blank"
 			class="resume-link"
-			href="https://drive.google.com/file/d/15W_VI0AolmRHb4tC0LEhkMpJH1gU3T4K/view"
+			href="https://drive.google.com/file/d/1xECBJLIjhk3Z5bJ_ZWQF_5JpkbNaUTma/view?usp=sharing"
 		>
 			Resume / CV
 		</a>
@@ -59,7 +59,7 @@ export default function Layout(props:ParentProps ){
 		<a
 			target="_blank"
 			rel="noopener noreferrer"
-			href="https://www.linkedin.com/in/jaya-surya-b67a51206/"
+			href="https://www.linkedin.com/in/jaya-surya-teja-anisetty-b67a51206"
 		>
 			{/* linkedin */}
 			<img src={linkedInImage} />
