@@ -20,7 +20,7 @@ export default function Layout(props:ParentProps ){
 		<a
 			target="_blank"
 			class="resume-link"
-			href="https://drive.google.com/file/d/1HcVuny5xHzaobkSRh7VDb3dHGc4sUwVz/view?usp=sharing"
+			href={process.env.RESUME_LINK}
 		>
 			Resume / CV
 		</a>
@@ -68,7 +68,7 @@ export default function Layout(props:ParentProps ){
 		<a
 			target="_blank"
 			rel="noopener noreferrer"
-			href="mailto:jaysuryahyd@gmail.com"
+			href={`mailto:${process.env.EMAIL}`}
 			style={{
 				"margin-left": "auto",
 				"font-size": "1.5rem",
@@ -77,7 +77,7 @@ export default function Layout(props:ParentProps ){
 			}}
 		>
 			<img src={envelope} style={{ "margin-right": "1rem" }} />
-			<span>jaysuryahyd@gmail.com</span>
+			<span>{process.env.EMAIL}</span>
 		</a>
 	</footer>
 </div>

@@ -74,7 +74,7 @@ export default function HomePage(){
 		<a
 			target="_blank"
 			rel="noopener noreferrer"
-			href="mailto:jaysuryahyd@gmail.com"
+			href={`mailto:${process.env.EMAIL}`}
 			style={{
 				"margin-left": "auto",
 				"font-size": "1.5rem",
@@ -83,7 +83,7 @@ export default function HomePage(){
 			}}
 		>
 			<img src={envelope} style={{ "margin-right": "1rem" }} />
-			<span>jaysuryahyd@gmail.com</span>
+			<span>{process.env.EMAIL}</span>
 		</a>
 	</footer>
 </div>

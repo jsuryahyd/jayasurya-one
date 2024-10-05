@@ -11,7 +11,7 @@ describe('Layout', () => {
       expect(nameLink).toBeInTheDocument();
       expect(nameLink).toHaveAttribute('href', 'https://docs.google.com/document/d/1OXNuIQdYByfBYvVxUXxjmP0cVLzuAt5SXSpJ_SpW71U/edit?usp=sharing');
       expect(resumeLink).toBeInTheDocument();
-      expect(resumeLink).toHaveAttribute('href', 'https://drive.google.com/file/d/1HcVuny5xHzaobkSRh7VDb3dHGc4sUwVz/view?usp=sharing');
+      expect(resumeLink).toHaveAttribute('href', {process.env.RESUME_LINK});
     });
 
     // Handles missing or broken image links gracefully
