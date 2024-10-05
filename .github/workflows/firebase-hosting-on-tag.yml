@@ -12,14 +12,10 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     environment: production
+    env: 
+      RESUME_LINK: ${{ vars.RESUME_LINK }}
+      EMAIL: ${{ vars.EMAIL }}
     steps:
-      - name: Use env variables
-        run: |
-          echo "RESUME_LINK=$RESUME_LINK"
-          echo "EMAIL=$EMAIL"
-        env: 
-          RESUME_LINK: ${{ vars.RESUME_LINK }}
-          EMAIL: ${{ vars.EMAIL }}
       - uses: actions/checkout@v2
       - run: npm i && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
